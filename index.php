@@ -6,22 +6,6 @@
     <title>PHP Test File</title>
 </head>
 <body>
-    
-<h1>PHP Demo</h1>
-
-<?php
-    echo "<p>Hello World (afișat în browser)</p>";
-
-    $message = "Hello din PHP!";
-    
-    echo "<p>Mesaj: " . $message . "</p>";
-
-?>
-
-    <script>
-
-    console.log("<?php echo $message; ?>");
-    </script>
 
 </body>
 </html>
