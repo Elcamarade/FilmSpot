@@ -1,7 +1,8 @@
 <?php
 require_once __DIR__ . '/functions.php';
 
-function loginUser($email, $password) {
+function loginUser($email, $password)
+{
     $users = readJSON('data/users.json');
     foreach ($users as $user) {
         if ($user['email'] === $email && password_verify($password, $user['password'])) {
@@ -15,7 +16,8 @@ function loginUser($email, $password) {
     return 'Email sau parolă incorectă.';
 }
 
-function registerUser($name, $email, $password) {
+function registerUser($name, $email, $password)
+{
     $users = readJSON('data/users.json');
     foreach ($users as $user) {
         if ($user['email'] === $email) {
@@ -34,7 +36,8 @@ function registerUser($name, $email, $password) {
     return true;
 }
 
-function requireLogin() {
+function requireLogin()
+{
     if (!isset($_SESSION['user'])) {
         header('Location: login.php');
         exit;

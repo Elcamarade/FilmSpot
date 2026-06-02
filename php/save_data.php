@@ -1,10 +1,12 @@
 <?php
+
 /**
  * save_data.php — Helper for saving/updating data in JSON files
  */
 require_once __DIR__ . '/functions.php';
 
-function addItem($file, $item) {
+function addItem($file, $item)
+{
     $data = readJSON($file);
     $item['id'] = $item['id'] ?? uniqid();
     $data[] = $item;
@@ -12,7 +14,8 @@ function addItem($file, $item) {
     return $item;
 }
 
-function updateItem($file, $id, $updates) {
+function updateItem($file, $id, $updates)
+{
     $data = readJSON($file);
     foreach ($data as &$item) {
         if (($item['id'] ?? '') === $id) {
@@ -23,7 +26,8 @@ function updateItem($file, $id, $updates) {
     saveJSON($file, $data);
 }
 
-function deleteItem($file, $id) {
+function deleteItem($file, $id)
+{
     $data = readJSON($file);
     $data = array_values(array_filter($data, fn($item) => ($item['id'] ?? '') !== $id));
     saveJSON($file, $data);
