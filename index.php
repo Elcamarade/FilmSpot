@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ro" data-theme="light">
 
@@ -61,7 +60,7 @@
     <footer class="footer">
         <div class="container footer-inner">
             <a href="index.php" class="logo">FILM<span>SPOT</span></a>
-            <p>© 2025 FilmSpot. Toate drepturile rezervate.</p>
+            <p>© 2026 FilmSpot. Toate drepturile rezervate.</p>
             <div class="footer-links">
                 <a href="login.php">Login</a>
                 <a href="register.php">Register</a>
