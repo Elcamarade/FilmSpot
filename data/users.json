@@ -6,5 +6,21 @@
         "password": "$2y$10$AXVqRHG.Az.zpfL\/1sWWgOQErJvyrrjI4\/DYn1.rm.LrG0PJUTSNC",
         "created_at": "2026-06-02 11:11:15",
         "reservations": []
+    },
+    {
+        "id": "6a1fc0a74d310",
+        "name": "das",
+        "email": "das@gmail.com",
+        "password": "$2y$10$IFnPYlwFEZP0pPl3deTAmOwF2r5oh3ywDhw5rNFeN1GxVhPzOzkuK",
+        "created_at": "2026-06-03 07:50:31",
+        "reservations": [
+            {
+                "film_id": "1",
+                "film_title": "Inception",
+                "date": "2026-06-03",
+                "time": "16:30",
+                "seat": "A3"
+            }
+        ]
     }
 ]

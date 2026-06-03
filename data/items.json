@@ -1,0 +1,22 @@
+[
+  {"id":"1","title":"Inception","genre":"Sci-Fi","duration":148,"rating":8.8,"emoji":"🌀","color":"linear-gradient(135deg,#1a1a2e,#16213e)"},
+  {"id":"2","title":"The Dark Knight","genre":"Action","duration":152,"rating":9.0,"emoji":"🦇","color":"linear-gradient(135deg,#0f0f0f,#1c1c1c)"},
+  {"id":"3","title":"Interstellar","genre":"Sci-Fi","duration":169,"rating":8.6,"emoji":"🪐","color":"linear-gradient(135deg,#000428,#004e92)"},
+  {"id":"4","title":"Parasite","genre":"Thriller","duration":132,"rating":8.5,"emoji":"🏠","color":"linear-gradient(135deg,#1d3557,#457b9d)"},
+  {"id":"5","title":"The Matrix","genre":"Sci-Fi","duration":136,"rating":8.7,"emoji":"💊","color":"linear-gradient(135deg,#0d0d0d,#003300)"},
+  {"id":"6","title":"Pulp Fiction","genre":"Crime","duration":154,"rating":8.9,"emoji":"💼","color":"linear-gradient(135deg,#2c1810,#8b4513)"},
+  {"id":"7","title":"The Godfather","genre":"Crime","duration":175,"rating":9.2,"emoji":"🌹","color":"linear-gradient(135deg,#1a0a00,#4a1500)"},
+  {"id":"8","title":"Avengers: Endgame","genre":"Action","duration":181,"rating":8.4,"emoji":"⚡","color":"linear-gradient(135deg,#1a1a2e,#c0392b)"},
+  {"id":"9","title":"Joker","genre":"Drama","duration":122,"rating":8.4,"emoji":"🃏","color":"linear-gradient(135deg,#1a0000,#8b0000)"},
+  {"id":"10","title":"Dune","genre":"Sci-Fi","duration":155,"rating":8.0,"emoji":"🏜️","color":"linear-gradient(135deg,#3d2b1f,#c49a3c)"},
+  {"id":"11","title":"Fight Club","genre":"Drama","duration":139,"rating":8.8,"emoji":"👊","color":"linear-gradient(135deg,#1c1c1c,#4a0000)"},
+  {"id":"12","title":"Forrest Gump","genre":"Drama","duration":142,"rating":8.8,"emoji":"🏃","color":"linear-gradient(135deg,#1a3a1a,#2d5a27)"},
+  {"id":"13","title":"Gladiator","genre":"Action","duration":155,"rating":8.5,"emoji":"⚔️","color":"linear-gradient(135deg,#3d1c02,#8b4513)"},
+  {"id":"14","title":"The Shawshank Redemption","genre":"Drama","duration":142,"rating":9.3,"emoji":"🔓","color":"linear-gradient(135deg,#1a1200,#4a3800)"},
+  {"id":"15","title":"Whiplash","genre":"Drama","duration":107,"rating":8.5,"emoji":"🥁","color":"linear-gradient(135deg,#0d0d0d,#8b0000)"},
+  {"id":"16","title":"Oppenheimer","genre":"History","duration":180,"rating":8.3,"emoji":"☢️","color":"linear-gradient(135deg,#0a0a1a,#1a1a4a)"},
+  {"id":"17","title":"Everything Everywhere","genre":"Comedy","duration":139,"rating":7.8,"emoji":"🥟","color":"linear-gradient(135deg,#2d1b69,#11998e)"},
+  {"id":"18","title":"No Country for Old Men","genre":"Thriller","duration":122,"rating":8.1,"emoji":"🪙","color":"linear-gradient(135deg,#1a1000,#3d2800)"},
+  {"id":"19","title":"La La Land","genre":"Romance","duration":128,"rating":8.0,"emoji":"🎷","color":"linear-gradient(135deg,#1a0533,#6a0572)"},
+  {"id":"20","title":"Spirited Away","genre":"Animation","duration":125,"rating":8.6,"emoji":"🐉","color":"linear-gradient(135deg,#0d2137,#1a6b8a)"}
+]

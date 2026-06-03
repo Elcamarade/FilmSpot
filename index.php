@@ -28,7 +28,7 @@
                 <a href="#">EN</a>
                 <a href="#">RU</a>
             </div>
-            <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+            <button class="theme-toggle" onclick="toggleTheme()">☀</button>
             <button class="hamburger" onclick="toggleMenu()">☰</button>
         </div>
     </nav>
