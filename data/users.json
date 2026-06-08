@@ -15,11 +15,11 @@
         "created_at": "2026-06-03 07:50:31",
         "reservations": [
             {
-                "film_id": "1",
-                "film_title": "Inception",
+                "film_id": "3",
+                "film_title": "Interstellar",
                 "date": "2026-06-03",
-                "time": "16:30",
-                "seat": "A3"
+                "time": "22:00",
+                "seat": "A20"
             }
         ]
     }

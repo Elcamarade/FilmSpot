@@ -10,6 +10,11 @@
 </head>
 
 <body>
+<?php   
+$films = json_decode(file_get_contents(__DIR__ . '/data/items.json'), true) ?? [];
+$lang = $_SESSION['lang'] ?? 'ro';
+$theme = $_SESSION['theme'] ?? 'dark';
+?>
 
     <!-- MENIU -->
     <nav class="navbar">
@@ -33,7 +38,7 @@
         </div>
     </nav>
 
-    <!-- PAGINA PRINCIPALĂ / HERO -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
             <p class="hero-eyebrow">🎬 FILMSPOT CINEMA</p>
@@ -51,6 +56,86 @@
                     <span></span><span></span><span></span><span></span>
                     <span></span><span></span><span></span><span></span>
                     <span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILMS -->
+    <section class="films-section" id="films">
+        <div class="container">
+            <h2 class="section-title">Acum pe ecrane</h2>
+            <div class="films-grid">
+                <?php foreach ($films as $film): ?>
+                    <div class="film-card" data-id="<?= htmlspecialchars($film['id']) ?>">
+                        <div class="film-poster">
+                            <div class="poster-placeholder" style="background: <?= $film['color'] ?? 'linear-gradient(135deg,#e50914,#831010)' ?>">
+                                <span class="poster-emoji"><?= $film['emoji'] ?? '🎬' ?></span>
+                            </div>
+                            <div class="film-overlay">
+                                <?php if (isset($_SESSION['user'])): ?>
+                                    <a href="dashboard.php?reserve=<?= $film['id'] ?>" class="btn-reserve">Rezervă bilet</a>
+                                <?php else: ?>
+                                    <a href="login.php" class="btn-reserve">Rezervă bilet</a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="film-info">
+                            <h3><?= htmlspecialchars($film['title']) ?></h3>
+                            <div class="film-meta">
+                                <span class="badge"><?= htmlspecialchars($film['genre']) ?></span>
+                                <span class="meta-item">⏱ <?= $film['duration'] ?> min </span>
+                                <span class="meta-item">⭐ <?= $film['rating'] ?></span>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Despre <span class="accent">FilmSpot</span></h2>
+                    <p>FilmSpot este platforma ta modernă de rezervare a biletelor la cinema. Oferim o experiență simplă, rapidă și plăcută pentru toți iubitorii de film.</p>
+                    <p>Alege din zeci de filme, selectează locul preferat și primești confirmarea instant — totul online, fără cozi.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat"><span class="stat-num">50+</span><span>Filme</span></div>
+                    <div class="stat"><span class="stat-num">5★</span><span>Rating</span></div>
+                    <div class="stat"><span class="stat-num">24/7</span><span>Online</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">Funcționalități</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🎟</span>
+                    <h3>Rezervare rapidă</h3>
+                    <p>Bilete rezervate în mai puțin de 60 de secunde.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💺</span>
+                    <h3>Alegere loc</h3>
+                    <p>Vezi sala și alege locul preferat vizual.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🌙</span>
+                    <h3>Dark / Light mode</h3>
+                    <p>Interfață adaptată preferințelor tale.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🌍</span>
+                    <h3>Multilingv</h3>
+                    <p>Disponibil în română, engleză și rusă.</p>
                 </div>
             </div>
         </div>
