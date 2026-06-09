@@ -7,14 +7,27 @@
     <title>FilmSpot — Rezervă bilete la cinema</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <div id="google_translate_element" style="display:none"></div>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ro',
+                includedLanguages: 'ro,en,ru',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </head>
 
 <body>
-<?php   
-$films = json_decode(file_get_contents(__DIR__ . '/data/items.json'), true) ?? [];
-$lang = $_SESSION['lang'] ?? 'ro';
-$theme = $_SESSION['theme'] ?? 'dark';
-?>
+    <?php
+    $films = json_decode(file_get_contents(__DIR__ . '/data/items.json'), true) ?? [];
+    $lang = $_SESSION['lang'] ?? 'ro';
+    $theme = $_SESSION['theme'] ?? 'dark';
+    ?>
 
     <!-- MENIU -->
     <nav class="navbar">
@@ -28,10 +41,10 @@ $theme = $_SESSION['theme'] ?? 'dark';
             <li><a href="contact.php">Contact</a></li>
         </ul>
         <div class="nav-right">
-            <div class="lang-switcher">
-                <a href="#" class="active">RO</a>
-                <a href="#">EN</a>
-                <a href="#">RU</a>
+            <div class="lang-switcher" translate="no">
+                <a href="#" onclick="doTranslate('ro'); return false;">RO</a>
+                <a href="#" onclick="doTranslate('en'); return false;">EN</a>
+                <a href="#" onclick="doTranslate('ru'); return false;">RU</a>
             </div>
             <button class="theme-toggle" onclick="toggleTheme()">☀</button>
             <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -42,7 +55,11 @@ $theme = $_SESSION['theme'] ?? 'dark';
     <section class="hero">
         <div class="hero-content">
             <p class="hero-eyebrow">🎬 FILMSPOT CINEMA</p>
-            <h1>EXPERIENȚA<br>CINEMA,<br><span class="red">REDEFINITĂ.</span></h1>
+            <h1>
+                <span class="hero-line">EXPERIENȚA</span>
+                <span class="hero-line">CINEMA,</span>
+                <span class="hero-line red">REDEFINITĂ.</span>
+            </h1>
             <p class="hero-desc">Rezervă biletele tale online în câteva secunde. Alege filmul, ora, locul — și bucură-te de magie.</p>
             <div class="hero-btns">
                 <a href="#filme" class="btn-primary">Explorează filme</a>

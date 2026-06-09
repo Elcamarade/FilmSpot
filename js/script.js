@@ -71,3 +71,13 @@ document.querySelectorAll('.film-card, .feature-card').forEach(card => {
     card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(card);
 });
+
+//Translate
+
+function doTranslate(lang) {
+  const select = document.querySelector('.goog-te-combo');
+  if (select) {
+    select.value = lang;
+    select.dispatchEvent(new Event('change'));
+  }
+}

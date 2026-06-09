@@ -156,6 +156,18 @@ a {
     gap: 0.5rem;
 }
 
+/* Lang switcher */
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+body > .skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
 /* ===== HERO (PAGINA PRINCIPALĂ) ===== */
 .hero {
   min-height: calc(100vh - var(--nav-h));
@@ -188,6 +200,7 @@ a {
   line-height: 0.95;
   letter-spacing: 2px;
   margin-bottom: 1.5rem;
+  display: block;
 }
 .red {
   color: var(--red);
