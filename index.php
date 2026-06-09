@@ -2,6 +2,13 @@
 <html lang="ro" data-theme="light">
 
 <head>
+<script>
+    (function () {
+      const t = localStorage.getItem('fs_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FilmSpot — Rezervă bilete la cinema</title>
