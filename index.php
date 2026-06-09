@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="ro" data-theme="light">
 
@@ -40,13 +42,18 @@
     <nav class="navbar">
         <a href="index.php" class="logo">FILM<span>SPOT</span></a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="index.php" class="active">Acasă</a></li>
-            <li><a href="#despre">Despre</a></li>
-            <li><a href="#functionalitati">Funcționalități</a></li>
-            <li><a href="login.php">Autentificare</a></li>
-            <li><a href="register.php" class="btn-register">Înregistrare</a></li>
-            <li><a href="contact.php">Contact</a></li>
-        </ul>
+    <li><a href="index.php" class="active">Acasă</a></li>
+    <li><a href="#about">Despre</a></li>
+    <li><a href="#features">Funcționalități</a></li>
+    <?php if (isset($_SESSION['user'])): ?>
+        <li><a href="dashboard.php">Dashboard</a></li>
+        <li><a href="logout.php" class="btn-register">Logout</a></li>
+    <?php else: ?>
+        <li><a href="login.php">Autentificare</a></li>
+        <li><a href="register.php" class="btn-register">Înregistrare</a></li>
+    <?php endif; ?>
+    <li><a href="contact.php">Contact</a></li>
+</ul>
         <div class="nav-right">
             <div class="lang-switcher" translate="no">
                 <a href="#" onclick="doTranslate('ro'); return false;">RO</a>
